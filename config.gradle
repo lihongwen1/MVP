@@ -88,7 +88,11 @@ ext {
             //65536分包
             multidex             : "com.android.support:multidex:$versions.multidex",
             //lifecycle
-            lifecycle            : "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle",
+            lifecycle            : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle",
+            //ViewModel
+            viewmodel            : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
+            //LiveData
+            livedata             : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
             //https://github.com/mylhyl/Android-Zxing
             zxing                : "com.mylhyl:zxingscanner:$versions.zxing"
     ]
