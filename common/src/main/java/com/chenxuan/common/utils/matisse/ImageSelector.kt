@@ -1,34 +1,38 @@
 package com.chenxuan.common.utils.matisse
 
-import android.Manifest
+import android.app.Activity
 import android.content.pm.ActivityInfo
-import androidx.appcompat.app.AppCompatActivity
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.ToastUtils
-import com.tbruyelle.rxpermissions2.RxPermissions
+import com.yanzhenjie.permission.AndPermission
+import com.yanzhenjie.permission.runtime.Permission
 import com.zhihu.matisse.Matisse
 import com.zhihu.matisse.MimeType
 import com.zhihu.matisse.internal.entity.CaptureStrategy
 
 object ImageSelector {
-    const val REQUEST_CODE_CHOOSE = 10
+    private const val REQUEST_CODE_CHOOSE = 10
 
     fun open() {
-        val subscribe = RxPermissions(ActivityUtils.getTopActivity() as AppCompatActivity).request(
-            Manifest.permission.CAMERA,
-            Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.WRITE_EXTERNAL_STORAGE
-        )
-            .subscribe { granted ->
-                if (granted) {
-                    realOpen(ActivityUtils.getTopActivity() as AppCompatActivity)
-                } else {
-                    ToastUtils.showShort("您拒绝了权限")
-                }
+        AndPermission.with(ActivityUtils.getTopActivity())
+            .runtime()
+            .permission(
+                arrayOf(
+                    Permission.CAMERA,
+                    Permission.READ_EXTERNAL_STORAGE,
+                    Permission.WRITE_EXTERNAL_STORAGE
+                )
+            )
+            .onGranted {
+                realOpen(ActivityUtils.getTopActivity())
             }
+            .onDenied {
+                ToastUtils.showShort("您拒绝了权限")
+            }
+            .start()
     }
 
-    private fun realOpen(activity: AppCompatActivity) {
+    private fun realOpen(activity: Activity) {
         Matisse.from(activity)
             .choose(MimeType.ofAll())
             .countable(true)

@@ -32,7 +32,7 @@ ext {
             logger             : '2.2.0',
             immersionbar       : '3.0.0-beta05',
             RecyclerViewAdapter: '2.9.30',
-            rxpermissions      : '0.10.2',
+            permissions        : '2.0.3',
             matisse            : '0.5.2-beta3',
             eventbus           : '3.1.1',
             leakcanary         : '2.0-alpha-2',
@@ -76,8 +76,8 @@ ext {
             immersionbar_ktx     : "com.gyf.immersionbar:immersionbar-ktx:$versions.immersionbar",
             //https://www.jianshu.com/p/b343fcff51b0
             RecyclerViewAdapter  : "com.github.CymChad:BaseRecyclerViewAdapterHelper:$versions.RecyclerViewAdapter",
-            //https://github.com/tbruyelle/RxPermissions
-            rxpermissions        : "com.github.tbruyelle:rxpermissions:$versions.rxpermissions",
+            //https://github.com/yanzhenjie/AndPermission
+            permissions          : "com.yanzhenjie:permission:$versions.permissions",
             //https://github.com/zhihu/Matisse
             matisse              : "com.zhihu.android:matisse:$versions.matisse",
             //https://github.com/greenrobot/EventBus
