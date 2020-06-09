@@ -5,7 +5,6 @@ import java.util.concurrent.ConcurrentHashMap
 
 /**
  * @author cx
- * 中缀函数
  */
 infix fun <E> ArrayList<E>.ktxAdd(e: E) = this.add(e)
 

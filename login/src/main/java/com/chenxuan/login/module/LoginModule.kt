@@ -7,6 +7,9 @@ import com.chenxuan.net.Api
 import com.chenxuan.net.ApiServiceUtil
 import io.reactivex.Observable
 
+/**
+ * @author cx
+ */
 class LoginModule : BaseModule<LoginApiService>() {
     override fun createApiService(): LoginApiService {
         return ApiServiceUtil.getApiService()

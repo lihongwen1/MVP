@@ -8,6 +8,9 @@ import java.io.IOException;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 
+/**
+ * @author cx
+ */
 final class CxResponseBodyConverter<T> implements Converter<ResponseBody, T> {
     private final Gson gson;
     private final TypeAdapter<T> adapter;
@@ -21,10 +24,8 @@ final class CxResponseBodyConverter<T> implements Converter<ResponseBody, T> {
     public T convert(ResponseBody value) throws IOException {
         String response = value.string();
         BasicResponse basicResponse = gson.fromJson(response, BasicResponse.class);
-        // 这里只是为了检测code是否!=1,所以只解析HttpStatus中的字段,因为只要code和message就可以了
         if (basicResponse.getErrorCode() != BasicResponseCode.SUCCESS) {
             value.close();
-            //抛出一个RuntimeException, 这里抛出的异常会到subscribe的onError()方法中统一处理
             throw new ApiException(basicResponse.getErrorCode(), basicResponse.getErrorMsg());
         }
         try {

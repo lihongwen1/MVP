@@ -22,7 +22,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.chenxuan.kotlinmvp.fileprovider"
+            android:authorities="com.chenxuan.kotlin.mvp.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

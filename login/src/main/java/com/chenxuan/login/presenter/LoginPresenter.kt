@@ -8,6 +8,9 @@ import com.chenxuan.login.contract.ILogin
 import com.chenxuan.login.module.LoginModule
 import com.chenxuan.net.DefaultObserver
 
+/**
+ * @author cx
+ */
 class LoginPresenter(view: IView) : BasePresenter<ILogin.View>(view) {
     private val loginModule by lazy {
         LoginModule()

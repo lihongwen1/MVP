@@ -4,7 +4,6 @@ import java.text.DecimalFormat
 
 /**
  * @author cx
- * money 格式化
  */
 fun Double.format2Money(): String {
     val pattern = "###,###.##"

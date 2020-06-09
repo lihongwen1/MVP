@@ -6,7 +6,6 @@ import com.alibaba.android.arouter.launcher.ARouter
 
 /**
  * @author cx
- * Router工具类
  */
 object Router {
     fun startActivity(url: String) {

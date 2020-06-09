@@ -8,6 +8,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.Priority
 import com.zhihu.matisse.engine.ImageEngine
 
+/**
+ * @author cx
+ */
 class CxGlideEngine : ImageEngine {
     override fun loadThumbnail(context: Context, resize: Int, placeholder: Drawable, imageView: ImageView, uri: Uri) {
         Glide.with(context)

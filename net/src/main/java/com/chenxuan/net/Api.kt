@@ -18,7 +18,6 @@ import java.util.concurrent.TimeUnit
 
 /**
  * @author cx
- * net
  */
 class Api private constructor() {
     companion object {

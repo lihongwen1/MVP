@@ -2,7 +2,6 @@ package com.chenxuan.net
 
 /**
  * @author cx
- * response
  */
 class BasicResponse<T> {
     var errorCode: Int = 0

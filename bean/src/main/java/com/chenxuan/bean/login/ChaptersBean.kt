@@ -1,5 +1,8 @@
 package com.chenxuan.bean.login
 
+/**
+ * @author cx
+ */
 class ChaptersBean {
 
     /**

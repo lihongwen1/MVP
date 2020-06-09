@@ -10,6 +10,9 @@ import com.google.zxing.client.result.ParsedResultType
 import com.mylhyl.zxing.scanner.ScannerOptions
 import kotlinx.android.synthetic.main.activity_scan.*
 
+/**
+ * @author cx
+ */
 @Route(path = RouterPath.LOGIN_SCAN)
 class ScanActivity : BaseSimpleActivity() {
     override fun getContentView() = R.layout.activity_scan

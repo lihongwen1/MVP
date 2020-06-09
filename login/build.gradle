@@ -20,7 +20,7 @@ android {
 
         if (!isLoginModule.toBoolean()) {
             //单独调试时添加applicationId集成调试时移除
-            applicationId "com.chenxuan.kotlinmvp.login"
+            applicationId "com.chenxuan.kotlin.login"
         }
     }
 

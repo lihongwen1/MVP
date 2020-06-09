@@ -1,7 +1,7 @@
 package com.chenxuan.common.utils.router
 
 /**
- * 路由地址管理
+ * @author cx
  */
 interface RouterPath {
     companion object {

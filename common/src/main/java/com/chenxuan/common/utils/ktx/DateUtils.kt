@@ -5,7 +5,6 @@ import java.util.*
 
 /**
  * @author cx
- * 年月日时分秒
  */
 val sdfDate: SimpleDateFormat
     get() = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())

@@ -6,7 +6,6 @@ var lastTime = 0L
 
 /**
  * @author cx
- * 500毫秒内只允许点击一次
  */
 inline fun View.setSingleClick(crossinline onclick: (v: View?) -> Unit) {
     this.setOnClickListener {

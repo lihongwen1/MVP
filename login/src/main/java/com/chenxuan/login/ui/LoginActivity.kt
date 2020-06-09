@@ -12,6 +12,9 @@ import com.chenxuan.login.contract.ILogin
 import com.chenxuan.login.presenter.LoginPresenter
 import kotlinx.android.synthetic.main.activity_login.*
 
+/**
+ * @author cx
+ */
 @Route(path = RouterPath.LOGIN_MAIN)
 class LoginActivity : BaseActivity<ILogin.View, LoginPresenter>(), ILogin.View {
     override fun initData(savedInstanceState: Bundle?) {

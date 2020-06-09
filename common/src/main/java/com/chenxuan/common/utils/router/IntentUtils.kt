@@ -5,6 +5,9 @@ import com.blankj.utilcode.util.ToastUtils
 import com.yanzhenjie.permission.AndPermission
 import com.yanzhenjie.permission.runtime.Permission
 
+/**
+ * @author cx
+ */
 object IntentUtils {
     fun gotoScanActivity() {
         AndPermission.with(ActivityUtils.getTopActivity())

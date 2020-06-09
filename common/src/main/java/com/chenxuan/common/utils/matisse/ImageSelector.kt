@@ -10,6 +10,9 @@ import com.zhihu.matisse.Matisse
 import com.zhihu.matisse.MimeType
 import com.zhihu.matisse.internal.entity.CaptureStrategy
 
+/**
+ * @author cx
+ */
 object ImageSelector {
     private const val REQUEST_CODE_CHOOSE = 10
 
@@ -38,7 +41,7 @@ object ImageSelector {
             .countable(true)
             .maxSelectable(9)
             .capture(true)
-            .captureStrategy(CaptureStrategy(true, "com.chenxuan.kotlinmvp.fileprovider"))
+            .captureStrategy(CaptureStrategy(true, "com.chenxuan.kotlin.mvp.fileprovider"))
             .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
             .thumbnailScale(0.85f)
             .imageEngine(CxGlideEngine())

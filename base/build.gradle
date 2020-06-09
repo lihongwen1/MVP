@@ -60,6 +60,5 @@ dependencies {
     api root_dependencies.matisse
     api root_dependencies.eventbus
     api root_dependencies.multidex
-    api root_dependencies.lifecycle
     api root_dependencies.zxing
 }

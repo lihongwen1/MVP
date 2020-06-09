@@ -1,7 +1,7 @@
 ext {
     android = [
             compileSdkVersion: 29,
-            applicationId    : "com.chenxuan.kotlinmvp",
+            applicationId    : "com.chenxuan.kotlin.mvp",
             minSdkVersion    : 21,
             targetSdkVersion : 29,
             versionCode      : 1,
@@ -38,7 +38,6 @@ ext {
             leakcanary         : '2.0-alpha-2',
             leaksentry         : '2.0-alpha-2',
             multidex           : '1.0.3',
-            lifecycle          : '2.2.0',
             zxing              : '2.1.6'
     ]
 
@@ -87,12 +86,6 @@ ext {
             leaksentry           : "com.squareup.leakcanary:leaksentry:$versions.leaksentry",
             //65536分包
             multidex             : "com.android.support:multidex:$versions.multidex",
-            //lifecycle
-            lifecycle            : "androidx.lifecycle:lifecycle-runtime-ktx:$versions.lifecycle",
-            //ViewModel
-            viewmodel            : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle",
-            //LiveData
-            livedata             : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle",
             //https://github.com/mylhyl/Android-Zxing
             zxing                : "com.mylhyl:zxingscanner:$versions.zxing"
     ]

@@ -2,7 +2,6 @@ package com.chenxuan.net
 
 /**
  * @author cx
- * get ApiService
  */
 object ApiServiceUtil {
     private val map = mutableMapOf<Class<*>, Any?>()
